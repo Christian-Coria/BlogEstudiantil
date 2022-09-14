@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'webispc',
     'accounts',
     'blogs',
+    'tasks'
 
 ]
 
