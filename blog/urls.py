@@ -25,6 +25,7 @@ urlpatterns = [
     path('tasks/', include('tasks.urls')),
     path('chat/', include('chat.urls')),
     path('room/', include('room.urls')),
+    path('integrador/', include('integrador.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
