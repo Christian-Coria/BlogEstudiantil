@@ -11,10 +11,10 @@
         Are you sure you want to delete "{{ post }}"?
       </h5>
       <p class="text-center">
-        <small><i>Note: All the comments will also be deleted.</i></small>
+        <small><i>Nota: Todos los comentarios también serán eliminados..</i></small>
       </p>
       <p class="text-end">
-        <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-secondary">Cancel</a>
+        <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-secondary">Cancelar</a>
         <input class="btn btn-danger" type="submit" value="Confirm" />
       </p>
     </form>

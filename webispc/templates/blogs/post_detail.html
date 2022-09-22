@@ -26,9 +26,9 @@
     <div class="card-body pt-0">
         <hr>
         <div class="row">
-            <div class="col"><h5>Comments:</h5></div>
+            <div class="col"><h5>Comentarios:</h5></div>
             <div class="col text-end">
-                <a class="btn btn-primary mb-3" href="{% url 'add_comment' pk=post.pk %}">Add comment</a>
+                <a class="btn btn-primary mb-3" href="{% url 'add_comment' pk=post.pk %}">Agregar Comentario</a>
             </div>
         </div>
         {% for comment in post.comments.all %}
@@ -46,7 +46,7 @@
             {% endif %}
         {% empty %}
             <div class="alert alert-secondary mt-1" role="alert">
-                No comments yet.
+               No hay Comentarios Aun!.
             </div>
         {% endfor %}
     </div>

@@ -1,9 +1,17 @@
 {% extends 'chat/base4.html' %}
 
-{% block title %}Welcome | {% endblock %}
+{% block title %}Chat ISPC | {% endblock %}
 
 {% block content %}
 <div class="p-10 lg:p-20 text-center">
-    <h1 class="text-3xl lg:text-6xl text-white">EnLinea chat</h1>
+    <h1 class="text-3xl lg:text-6xl text-white">Ispc Chat ESTUDIANTIL</h1>
+    <br>
+    <a href={% url 'rooms' %} class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700">Selecciona La sala Para Ingresar</a>
+   <hr>
+   <br>
+    <center>
+    <IMG SRC="https://www.oas.org/ext/Portals/14/EasyDNNnews/588/Image.png" ALIGN=TOP>
+    </center>
+    
 </div>
 {% endblock %}

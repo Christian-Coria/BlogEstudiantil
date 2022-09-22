@@ -12,13 +12,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 
-        <title>Blog || How to</title>
+        <title>Blog Ispc Estudiantil</title>
 	</head>
-
+	
+	
 <body class='bg-light'>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Blog Project</a>
+			<a class="navbar-brand" href="#">Blog Ispc Estudiantil</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -31,13 +32,13 @@
 				<ul class="navbar-nav ms-auto">
 					{% if user.is_authenticated %}
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'post_new' %}">New Post</a>
+							<a class="nav-link" href="{% url 'post_new' %}">Nuevo Posts</a>
 						</li>
 						<li class="nav-item text-end">
-							<a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
+							<a class="nav-link" href="{% url 'post_draft_list' %}">Borradores</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'post_archived_list' %}">Archive</a>
+							<a class="nav-link" href="{% url 'post_archived_list' %}">Archivo</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'logout' %}">Logout</a>
@@ -58,10 +59,7 @@
 		</div>
 	</nav>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
+	
 				{% block content %}
 				{% endblock %}
 			</div>
