@@ -18,9 +18,21 @@ class CrearFormato(CreateView):
     success_url = 'proyecto'
     fields = ['tipo']
 
+
 # class CrearAlbum(CreateView):        # DESCOMENTAR HE IMPORTAR AL CREAR LAS DEMAS TABLAS!!!!
 #     model = Album
 #     template_name = "crear_album.html"
 #     success_url = 'proyecto'
 #     fields = ['nombre','interprete','genero','cant_temas', 'discografica', 'formato', 'fec_lanzamiento', 'precio', 'cantidad', 'caratula']
 
+def buscar_album(request):
+    if 'q' in request.GET:
+        q = request.GET['q']
+        all_album_list = Album.objects.filter(Q(nombre__icontains=q)).order_by('nombre',
+        Q(genero__icontains=q)).order_by('genero'), (Q(interprete__icontains=q)).order_by('interprete')
+    else:
+        all_album_list = Album.objects.all().order_by('nombre')
+        all_album_list = Album.objects.all().order_by('genero')
+        all_album_list = Album.objects.all().order_by('interprete')
+
+    return render(request, 'buscar_album.html', {"album":all_album_list})

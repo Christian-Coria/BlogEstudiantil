@@ -31,6 +31,12 @@ class Discografia(models.Model):
     pass  
 
 
+# para ordenar la lista 
+# def __unicode__(self): 
+#         return self.nombre_deporte_es
+
+#     class Meta:
+#         ordering = ['-nombre_deporte_es'] # Nota el guión
 
 #se crea la clase Album y se coloca al final ya que de esa forma heredara de las anteriores clases   DESCOMENTAR AL CREAR LAS DEMAS TABLAS!!!!!
 class Album(models.Model):
@@ -46,5 +52,6 @@ class Album(models.Model):
 #     cantidad = models.IntegerField()
 #     imagen = models.ImageField(upload_to="caratula", null=True, blank=True)
 
-# def __str__(self):
+    
+#   def __str__(self):
 #         return f'Album: {self.id} {self.nombre} {self.genero} {self.cant_temas} {self.discografica} {self.formato} {self.fec_lanzamiento} {self.precio} {self.cantidad} '
