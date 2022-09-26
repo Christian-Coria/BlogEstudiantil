@@ -6,24 +6,11 @@ from django.views.generic import ListView, DetailView, TemplateView, View
 from django.urls import reverse_lazy
 from django.db.models import Q
 from django.http import HttpResponse
-from integrador.models import  Formato
+from integrador.models import  Formato, Album, Discografica, Genero, Interprete, Tema
 
 class ProyectoIntegrador(TemplateView):
     template_name = "integrador/proyecto.html"
 
-
-class CrearFormato(CreateView):
-    model = Formato
-    template_name = "integrador/crear_formato.html"
-    success_url = 'proyecto'
-    fields = ['tipo']
-
-
-# class CrearAlbum(CreateView):        # DESCOMENTAR HE IMPORTAR AL CREAR LAS DEMAS TABLAS!!!!
-#     model = Album
-#     template_name = "crear_album.html"
-#     success_url = 'proyecto'
-#     fields = ['nombre','interprete','genero','cant_temas', 'discografica', 'formato', 'fec_lanzamiento', 'precio', 'cantidad', 'caratula']
 
 def buscar_album(request):
     if 'q' in request.GET:
@@ -36,3 +23,121 @@ def buscar_album(request):
         all_album_list = Album.objects.all().order_by('interprete')
 
     return render(request, 'buscar_album.html', {"album":all_album_list})
+
+
+class CrearAlbum(CreateView):        
+    model = Album
+    template_name = "integrador/crear_album.html"
+    success_url = 'proyecto'
+    fields = ['nombre','interprete','genero','cant_temas', 'discografica', 'formato', 'fec_lanzamiento', 'precio', 'cantidad']
+
+
+class ListarAlbum(ListView):
+    model = Album
+    template_name = "integrador/listar_album.html"
+
+
+class EditarAlbum(UpdateView):
+    model = Album
+    template_name ='integrador/editar_album.html'
+    success_url = reverse_lazy('listar_albums')
+    fields = ['nombre','interprete','genero','cant_temas', 'discografica', 'formato', 'fec_lanzamiento', 'precio', 'cantidad'] 
+
+
+class EliminarAlbum(DeleteView):
+    model = Album
+    template_name = "integrador/eliminar_album.html"
+    success_url = reverse_lazy('listar_album')
+
+
+class MostrarAlbum(DetailView):
+    model = Album
+    template_name = 'integrador/mostrar_album.html'
+
+class CrearFormato(CreateView):
+    pass
+
+
+class ListarFormato(ListView):
+    pass
+
+class EditarFormato(UpdateView):
+    pass
+
+
+class EliminarFormato(DeleteView):
+    pass
+
+class MostrarFormato(DetailView):
+    pass
+
+class CrearTema(CreateView):        
+    pass
+
+
+class ListarTema(ListView):
+    pass
+
+class EditarTema(UpdateView):
+    pass
+
+
+class EliminarTema(DeleteView):
+    pass
+
+class MostrarTema(DetailView):
+    pass
+
+class CrearInterprete(CreateView):        
+    pass
+class ListarInterprete(ListView):
+    pass
+
+
+class EditarInterprete(UpdateView):
+    pass
+
+
+class EliminarInterprete(DeleteView):
+    pass
+
+
+class MostrarInterprete(DetailView):
+    pass
+
+class CrearGenero(CreateView):        
+    pass
+
+
+class ListarGenero(ListView):
+    pass
+
+
+class EditarGenero(UpdateView):
+    pass 
+
+
+class EliminarGenero(DeleteView):
+    pass
+
+class MostrarGenero(DetailView):
+    pass
+
+
+class CrearDiscografica(CreateView):        
+    pass
+
+class ListarDiscografica(ListView):
+    pass
+
+
+class EditarDiscografica(UpdateView):
+    pass
+
+
+class EliminarDiscografica(DeleteView):
+    pass
+
+
+class MostrarDiscografica(DetailView):
+    pass
