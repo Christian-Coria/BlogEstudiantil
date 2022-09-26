@@ -71,39 +71,59 @@ class EliminarFormato(DeleteView):
 class MostrarFormato(DetailView):
     pass
 
-class CrearTema(CreateView):        
-    pass
-
-
 class ListarTema(ListView):
-    pass
+    model = Tema
+    template_name = "integrador/listar_tema.html"
+
 
 class EditarTema(UpdateView):
-    pass
+    model = Tema
+    template_name ='integrador/editar_tema.html'
+    success_url = reverse_lazy('listar_tema')
+    fields = ['titulo','duracion','autor','compositor', 'cod_album', 'interprete'] 
 
 
 class EliminarTema(DeleteView):
-    pass
+    model = Tema
+    template_name = "integrador/eliminar_tema.html"
+    success_url = reverse_lazy('listar_tema')
+
 
 class MostrarTema(DetailView):
-    pass
+    model = Tema
+    template_name = 'mostrar_tema.html'
+
 
 class CrearInterprete(CreateView):        
-    pass
+    model = Interprete
+    template_name = "integrador/crear_interprete.html"
+    success_url = 'proyecto'
+    fields = ['nombre', 'foto']
+
+
 class ListarInterprete(ListView):
-    pass
+    model = Interprete
+    template_name = "integrador/listar_interprete.html"
 
 
 class EditarInterprete(UpdateView):
-    pass
+    model = Interprete
+    template_name ='integrador/editar_interprete.html'
+    success_url = reverse_lazy('listar_interprete')
+    fields = ['nombre', 'foto'] 
 
 
 class EliminarInterprete(DeleteView):
-    pass
+    model = Interprete
+    template_name = "integrador/eliminar_interprete.html"
+    success_url = reverse_lazy('listar_interprete')
 
 
 class MostrarInterprete(DetailView):
-    pass
+    model = Interprete
+    template_name = 'integrador/mostrar_interprete.html'
+
+
 
 class CrearGenero(CreateView):        
     pass
