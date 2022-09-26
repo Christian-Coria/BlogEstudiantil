@@ -5,7 +5,17 @@ class Formato(models.Model):
     pass
 
 class Interprete(models.Model):
-    pass
+    nombre = models.CharField(max_length=255)
+    foto = models.ImageField(upload_to="caratula", null=True, blank=True)
+
+    def __unicode__(self): 
+        return f'{self.nombre}'
+
+    class Meta:
+        ordering = ['-nombre']
+
+    def __str__(self):
+      return f'{self.nombre}'
     
 class Genero(models.Model):
     pass
@@ -31,4 +41,12 @@ class Discografica(models.Model):
 
 
 class Tema(models.Model):
-   pass 
+    titulo = models.CharField(max_length=255)
+    duracion = models.IntegerField()
+    autor = models.CharField(max_length=255)
+    compositor = models.CharField(max_length=255)
+    cod_album = models.ForeignKey(Album,null=True, on_delete=models.CASCADE)
+    interprete = models.ForeignKey(Interprete,null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+      return f'{self.titulo}' 
