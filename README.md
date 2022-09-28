@@ -57,13 +57,20 @@ en windows:
 ```bash
 c:\> py --version
 c:\> Python 3.8.0
+## Clonar el Repositorio
+
+```bash
+> git clone url_clonada . 
+Luego de pegar la url clonada es importante colocar luego de un espacio, un Punto.
+Esto con la finalidad de que no se cree una carpeta de mas, sino que se copie El Proyecto dentro de la raiz de la carpeta seleccionada para ese fin.
+
 ```
 ## Crea tu Ambiente Virtual
 ---bash
-pip install virtualenv
+python -m venv env
 
-virtualenv env
-.\env\Scripts\activate 
+Segido de su activacion:
+source env/scripts/activate
 
 ## Instalar dependencias
 Para instalar las dependencias, debe ejecutar `pip install`, asegúrese de estar en la carpeta del proyecto y pueda ver el 'requirements.txt' archivo cuando haga 'ls' o 'dir':
