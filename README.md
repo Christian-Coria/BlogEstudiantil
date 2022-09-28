@@ -29,7 +29,7 @@ Cosas que puedes hacer::
 - Crear, leer, actualizar y eliminar Material complementario (videos, cursos afines...etc).
 - Un buscador general
 - Enlaces de comunicacion para el profesorado.
-- Enlaces de comunicacion para el profesorado.
+- Enlaces de comunicacion para Administracion.
 ### Area para agendar Recordatorios de Tareas:
 - Podras agendar o eliminar notas de recordatorio.
 ### Un Proyecto Ejemplo:
