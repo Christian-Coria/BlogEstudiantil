@@ -1,4 +1,10 @@
 # ispc_BlogEstudiantil
+##INTEGRANTES del Proyecto: 
+- Sotelo Joaquín
+- Mateo Coria
+- Lisbeth Betancourt
+- Christian Coria
+
 
 # ISPC ESTUDIANTIL
                                                       Plataforma Estudiantil ISPC
