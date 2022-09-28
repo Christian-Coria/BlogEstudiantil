@@ -2,7 +2,10 @@ from django.db import models
 
 
 class Formato(models.Model):
-    pass
+    tipo = models.CharField(max_length=40)
+
+    def __str__(self):
+       return f'{self.tipo}'
 
 class Interprete(models.Model):
     nombre = models.CharField(max_length=255)

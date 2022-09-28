@@ -1,19 +1,19 @@
 
 from django.urls import path
-from integrador.views import ProyectoIntegrador#, CrearGenero, MostrarInterprete, EliminarGenero, EditarGenero, MostrarGenero ,ListarGenero
-
+from integrador.views import (ProyectoIntegrador, ProyectoIntegrador, CrearFormato, EliminarFormato, EditarFormato, ListarFormato ,MostrarFormato,
+CrearAlbum, EliminarAlbum ,EditarAlbum , ListarAlbum, MostrarAlbum, CrearTema, EliminarTema, EditarTema, ListarTema, MostrarTema, 
+CrearInterprete, EliminarInterprete, EditarInterprete, ListarInterprete, CrearGenero, MostrarInterprete, EliminarGenero, EditarGenero, MostrarGenero ,ListarGenero,
+CrearDiscografica,  EliminarDiscografica, EditarDiscografica, ListarDiscografica,  MostrarDiscografica)
 
 urlpatterns = [
     
     path('proyecto',ProyectoIntegrador.as_view(), name="proyecto"),         
    
-    
-
-    # path('crear-album' , CrearAlbum.as_view(), name='crear_album'),
-    # path('eliminar-album/<int:pk>' , EliminarAlbum.as_view(), name='eliminar_album'),
-    # path('editar-album/<int:pk>' , EditarAlbum.as_view(), name='editar_album'),
-    # path('listar-album' , ListarAlbum.as_view(), name='listar_album'),
-    # path('mostrar-album/<int:pk>/' , MostrarAlbum.as_view(), name='mostrar_album'),
+    path('crear-album' , CrearAlbum.as_view(), name='crear_album'),
+    path('eliminar-album/<int:pk>' , EliminarAlbum.as_view(), name='eliminar_album'),
+    path('editar-album/<int:pk>' , EditarAlbum.as_view(), name='editar_album'),
+    path('listar-album' , ListarAlbum.as_view(), name='listar_album'),
+    path('mostrar-album/<int:pk>/' , MostrarAlbum.as_view(), name='mostrar_album'),
 
     path('crear-tema' , CrearTema.as_view(), name='crear_tema'),
     path('eliminar-tema/<int:pk>' , EliminarTema.as_view(), name='eliminar_tema'),
@@ -26,6 +26,11 @@ urlpatterns = [
     path('editar-interprete/<int:pk>' , EditarInterprete.as_view(), name='editar_interprete'),
     path('listar-interprete' , ListarInterprete.as_view(), name='listar_interprete'),
     path('mostrar-interprete/<int:pk>/' , MostrarInterprete.as_view(), name='mostrar_interprete'),
-    
+
+    path('crear-formato' , CrearFormato.as_view(), name='crear_formato'),
+    path('eliminar-formato/<int:pk>' , EliminarFormato.as_view(), name='eliminar_formato'),
+    path('editar-formato/<int:pk>' , EditarFormato.as_view(), name='editar_formato'),
+    path('listar-formato' , ListarFormato.as_view(), name='listar_formato'),
+    path('mostrar-formato/<int:pk>/' , MostrarFormato.as_view(), name='mostrar_formato'),
 
 ]
