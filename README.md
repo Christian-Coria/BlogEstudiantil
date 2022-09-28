@@ -26,6 +26,8 @@ Cosas que puedes hacer::
 - Enlaces de comunicacion para el profesorado.
 ### Area para agendar Recordatorios de Tareas:
 - Podras agendar o eliminar notas de recordatorio.
+### Un Proyecto Ejemplo:
+- Podras ver como se desarrolla un C.R.U.D en Django 'Usando Class Base Views'.
 
 
 # Instalar
