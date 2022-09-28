@@ -1,5 +1,5 @@
 # ispc_BlogEstudiantil
-##INTEGRANTES del Proyecto: 
+## INTEGRANTES del Proyecto: 
 - Sotelo Joaquín
 - Mateo Coria
 - Lisbeth Betancourt
