@@ -33,4 +33,18 @@ urlpatterns = [
     path('listar-formato' , ListarFormato.as_view(), name='listar_formato'),
     path('mostrar-formato/<int:pk>/' , MostrarFormato.as_view(), name='mostrar_formato'),
 
+    path('crear-genero' , CrearGenero.as_view(), name='crear_genero'),
+    path('eliminar-genero/<int:pk>' , EliminarGenero.as_view(), name='eliminar_genero'),
+    path('editar-genero/<int:pk>' , EditarGenero.as_view(), name='editar_genero'),
+    path('listar-genero' , ListarGenero.as_view(), name='listar_genero'),
+    path('mostrar-genero/<int:pk>/' , MostrarGenero.as_view(), name='mostrar_genero'),
+
+    path('crear-discografica' , CrearDiscografica.as_view(), name='crear_discografica'),
+    path('eliminar-discografica/<int:pk>' , EliminarDiscografica.as_view(), name='eliminar_discografica'),
+    path('editar-discografica/<int:pk>' , EditarDiscografica.as_view(), name='editar_discografica'),
+    path('listar-discografica' , ListarDiscografica.as_view(), name='listar_discografica'),
+    path('mostrar-discografica/<int:pk>/' , MostrarDiscografica.as_view(), name='mostrar_discografica'),
+
+]
+
 ]

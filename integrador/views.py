@@ -140,38 +140,60 @@ class MostrarInterprete(DetailView):
 
 
 class CrearGenero(CreateView):        
-    pass
+    model = Genero
+    template_name = "integrador/crear_genero.html"
+    success_url = 'proyecto'
+    fields = ['nombre']
 
 
 class ListarGenero(ListView):
-    pass
+    model = Genero
+    template_name = "integrador/listar_genero.html"
 
 
 class EditarGenero(UpdateView):
-    pass 
+    model = Genero
+    template_name ='integrador/editar_genero.html'
+    success_url = reverse_lazy('listar_genero')
+    fields = ['nombre'] 
 
 
 class EliminarGenero(DeleteView):
-    pass
+    model = Genero
+    template_name = "integrador/eliminar_genero.html"
+    success_url = reverse_lazy('listar_genero')
+
 
 class MostrarGenero(DetailView):
-    pass
+    model = Genero
+    template_name = 'integrador/mostrar_genero.html'
 
 
 class CrearDiscografica(CreateView):        
-    pass
+    model = Discografica
+    template_name = "integrador/crear_discografica.html"
+    success_url = 'proyecto'
+    fields = ['nombre']
+
 
 class ListarDiscografica(ListView):
-    pass
+    model = Discografica
+    template_name = "integrador/listar_discografica.html"
 
 
 class EditarDiscografica(UpdateView):
-    pass
+    model = Discografica
+    template_name ='integrador/editar_discografica.html'
+    success_url = reverse_lazy('listar_discografica')
+    fields = ['nombre'] 
 
 
 class EliminarDiscografica(DeleteView):
-    pass
+    model = Discografica
+    template_name = "integrador/eliminar_discografica.html"
+    success_url = reverse_lazy('listar_discografica')
 
 
 class MostrarDiscografica(DetailView):
-    pass
+    model = Discografica
+    template_name = 'integrador/mostrar_discografica.html'

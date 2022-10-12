@@ -21,10 +21,17 @@ class Interprete(models.Model):
       return f'{self.nombre}'
     
 class Genero(models.Model):
-    pass
+    nombre = models.CharField(max_length=255)
+
+    def __str__(self):
+      return f'{self.nombre}'
+
 
 class Discografica(models.Model):
-    pass
+    nombre = models.CharField(max_length=50)
+
+    def __str__(self):
+       return f'{self.nombre}'
 
 class Album(models.Model):
 
